@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>WeUI</title>
+    <!-- 引入 WeUI -->
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.3/weui.min.css"/>
+    <link rel="stylesheet" href="css/global.css"/>
+</head>
+<body>
+
+<div class="container" id="container">
+    <header>我要买</header>
+    <div class="page js_show home">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab">
+                <div class="weui-tab__panel">
+                    <span class="weui-badge">New</span>
+                    <span class="weui-badge">New</span>
+                    <span class="weui-badge">New</span>
+                    <span class="weui-badge">New</span>
+                </div>
+                <div class="weui-tabbar">
+                    <a href="javascript:;" class="weui-tabbar__item weui-bar__item">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    </span>
+                        <p class="weui-tabbar__label">我要买</p>
+                    </a>
+                    <a href="javascript:;" class="weui-tabbar__item_on">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                        <p class="weui-tabbar__label">任务</p>
+                    </a>
+                    <a href="javascript:;" class="weui-tabbar__item">
+                        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                        <p class="weui-tabbar__label">我</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" class="tabbar js_show">
+        $(function () {
+            $('.weui-tabbar__item').on('click', function () {
+                $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+            });
+        });</script>
+</div>
+<script src="js/jquery.min.js"></script>
+</body>
+</html>
